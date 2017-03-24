@@ -12,7 +12,7 @@ import java.util.Observer;
  *
  * @author Vinnie
  */
-public class Vogel extends Inwoner implements Observer{
+public class Vogel extends Inwoner {
 
     public Vogel(String naam) {
         super(naam);
@@ -20,8 +20,12 @@ public class Vogel extends Inwoner implements Observer{
 
     @Override
     public void update(Observable o, Object arg) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        reageerOpUitbarsting();
     }
     
+    public void reageerOpUitbarsting(){
+        System.out.println(this.getNaam() + " gaat hoger vliegen door een "
+                + "vulkaanuitbarsting.");
+    }
     
 }

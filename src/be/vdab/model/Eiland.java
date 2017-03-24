@@ -14,6 +14,24 @@ import java.util.Observable;
  */
 public class Eiland extends Observable{
     private List<Inwoner> inwonerLijst;
+
+    
+    public Eiland(List<Inwoner> inwonerLijst) {
+        this.inwonerLijst = inwonerLijst;
+    }
+    
+    public void vulkaanBarstUit(){
+        System.out.println("De vulkaan barst uit.");
+        setChanged();
+        notifyObservers();
+    }
+    
+    public List<Inwoner> getInwonerLijst() {
+        return inwonerLijst;
+    }
+
+    
+
     
     
     
